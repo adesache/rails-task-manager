@@ -2,6 +2,8 @@
 
 <p> <%= @task.details %></p>
 
+<%= link_to "Edit task", edit_path(@task) %>
+
 <% if @task.completed? %>
   <p><input type="checkbox" checked> This task is completed</p>
 <% else %>
