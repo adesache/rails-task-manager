@@ -1,11 +1,8 @@
-<%= form_for(task) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_area :details %>
+<%= simple_form_for(task) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :details %>
   <% if task.persisted?() %>
-    <%= f.check_box :completed %>
-    <%= f.label :completed, "Completed" %>
+    <%= f.input :completed %>
   <% end %>
-  <%= f.submit %>
+  <%= f.submit class: 'btn btn-primary' %>
 <% end %>
